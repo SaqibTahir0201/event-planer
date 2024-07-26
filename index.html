@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Planner</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div
+        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4"
+      >
+        <a
+          href="https://flowbite.com"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img
+            src="https://img.freepik.com/free-vector/hand-drawn-culture-logo-design_23-2149857661.jpg?size=626&ext=jpg&ga=GA1.1.532562652.1721903935&semt=ais_user"
+            class="h-20 rounded-full"
+            alt="Flowbite Logo"
+          />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >EventPlanner</span
+          >
+        </a>
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <a href="createEvent/index.html">create Event</a>
+          <a href="./profile/index.html">
+            <img
+              id="user_img"
+              class="h-10 w-10 rounded-full"
+              style="display: none"
+              src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWFufGVufDB8fDB8fHww"
+              alt="user img"
+            />
+          </a>
+          <a
+            id="login_link"
+            href="/auth/login/index.html"
+            class="text-sm text-blue-600 dark:text-blue-500 hover:underline"
+            >Login</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <button
+      id="logout_btn"
+      type="button"
+      class="my-5 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+    >
+      Logout
+    </button>
+
+    <script src="script.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+  </body>
+</html>
