@@ -12,8 +12,12 @@ import {
   doc,
   setDoc,
   getDoc,
+  getDocs,
   collection,
   addDoc,
+  updateDoc,
+  arrayUnion,
+  arrayRemove,
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 import {
   getStorage,
@@ -53,7 +57,10 @@ export {
   signInWithEmailAndPassword,
   signOut,
   getDoc,
+  getDocs,
   collection,
   addDoc,
-
+  updateDoc,
+  arrayUnion,
+  arrayRemove,
 };

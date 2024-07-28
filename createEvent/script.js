@@ -6,8 +6,9 @@ import {
   db,
   collection,
   addDoc,
+  auth,
 } from "../utils/utils.js";
-
+console.log(auth);
 const event_form = document.querySelector("#event_form");
 
 event_form.addEventListener("submit", (e) => {
@@ -22,6 +23,9 @@ event_form.addEventListener("submit", (e) => {
     time: e.target[3].value,
     guests: e.target[5].value,
     img: e.target[6].files[0],
+    createdBy: auth.currentUser.uid,
+    createdByEmail: auth.currentUser.email,
+    likes: [],
   };
 
   console.log("eventinfoooo =>", eventInfo);
@@ -32,6 +36,8 @@ event_form.addEventListener("submit", (e) => {
   console.log("time =>", eventInfo.time);
   console.log("guests =>", eventInfo.guests);
   console.log("img =>", eventInfo.img);
+  console.log("created by =>", eventInfo.createdBy);
+  console.log("created by email =>", eventInfo.createdByEmail);
 
   const imgRef = ref(storage, eventInfo.img.name);
 

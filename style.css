@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(#141e30, #2a6c5a);
+}
+#signing_btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03f484;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin: 40px;
+  letter-spacing: 4px;
+}
+
+#signing_btn:hover {
+  background: #03f484;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03f484, 0 0 25px #03f484, 0 0 50px #03f484,
+    0 0 100px #03f484;
+}
+
+#signing_btn span {
+  position: absolute;
+  display: block;
+}
+
+#signing_btn span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03f484);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+#signing_btn span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03f484);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.2s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+#signing_btn span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03f484);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+#signing_btn span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03f484);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+
+.Btn {
+  width: 140px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.089);
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.leftContainer {
+  width: 60%;
+  height: 100%;
+  background-color: rgb(238, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.leftContainer .like {
+  color: white;
+  font-weight: 600;
+}
+
+.likeCount {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(238, 0, 0);
+  font-weight: 600;
+  position: relative;
+  background-color: white;
+}
+
+.likeCount::before {
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  content: "";
+  background-color: rgb(255, 255, 255);
+  transform: rotate(45deg);
+  left: -4px;
+}
+
+.Btn:hover .leftContainer {
+  background-color: rgb(219, 0, 0);
+}
+
+.Btn:active .leftContainer {
+  background-color: rgb(201, 0, 0);
+}
+
+.Btn:active .leftContainer svg {
+  transform: scale(1.15);
+  transform-origin: top;
+}
+
+.Btn.liked .leftContainer {
+  background-color: rgb(0, 238, 0);
+}
+
+.Btn.liked .leftContainer .like {
+  color: white;
+}
+
+.Btn.liked .likeCount {
+  color: rgb(0, 238, 0);
+}
+
+.Btn .leftContainer {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.Btn:hover .leftContainer {
+  background-color: rgb(219, 0, 0);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.Btn:active .leftContainer {
+  background-color: rgb(201, 0, 0);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.Btn .leftContainer svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.Btn:active .leftContainer svg {
+  transform: scale(1.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.Btn.liked .leftContainer {
+  background-color: rgb(0, 238, 0);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.Btn.liked .likeCount {
+  color: rgb(0, 238, 0);
+  transition: color 0.3s ease-in-out;
+}
+.likeCount {
+  animation: likeCount 0.5s ease-in-out;
+}
+
+@keyframes likeCount {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.Btn:active .likeCount {
+  animation: likeCountActive 0.5s ease-in-out;
+}
+
+@keyframes likeCountActive {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#main_card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  gap: 20px; /* adjust the gap value as needed */
+}
+
+

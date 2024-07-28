@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
       rel="stylesheet"
@@ -18,46 +20,50 @@
         <div class="mb-5">
           <label
             for="email"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            class="block mb-2 text-sm font-medium text-emerald-400 dark:text-white"
             >Your email</label
           >
           <input
             type="email"
             id="email"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="name@flowbite.com"
+            class=" bg-gradient-to-r from-[#2a6c5a] to-[#141e30]  border border-emerald-700 text-white text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder:text-[#F7F7F7] dark:text-white dark:focus:ring-emerald-500 dark:focus:border-emerald-500"
             required
+            placeholder="email"
           />
         </div>
         <div class="mb-5">
           <label
             for="password"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            class="block mb-2 text-sm font-medium text-emerald-400 dark:text-white"
             >Your password</label
           >
           <input
             type="password"
             id="password"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            class=" bg-gradient-to-r from-[#2a6c5a] to-[#141e30]  border border-emerald-700 text-white text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder:text-[#F7F7F7] dark:text-white dark:focus:ring-emerald-500 dark:focus:border-emerald-500"
             required
+            placeholder="password"
           />
         </div>
         <div
           for="terms"
-          class="ms-2 my-5 text-sm font-medium text-gray-900 dark:text-gray-300"
+          class="ms-2 my-5 text-sm font-medium text-white dark:text-gray-300"
         >
           Don't have a account
           <a
             href="../signup/index.html"
-            class="text-blue-600 hover:underline dark:text-blue-500"
-            >Create account</a
+            class="text-emerald-400 hover:underline dark:text-emerald-400"
+          >
+            Create account</a
           >
         </div>
-
         <button
           type="submit"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          class="bg-emerald-950 text-emerald-400 border border-emerald-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
         >
+          <span
+            class="bg-emerald-400 shadow-emerald-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"
+          ></span>
           Submit
         </button>
       </div>
